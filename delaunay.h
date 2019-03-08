@@ -41,9 +41,9 @@ class Delaunay
 			const T midx = half(minX + maxX);
 			const T midy = half(minY + maxY);
 
-			const VertexType p1(midx - 20 * deltaMax, midy - deltaMax);
-			const VertexType p2(midx, midy + 20 * deltaMax);
-			const VertexType p3(midx + 20 * deltaMax, midy - deltaMax);
+			const VertexType p1(midx - 20 * deltaMax, midy - deltaMax, -10);
+			const VertexType p2(midx, midy + 20 * deltaMax,-10);
+			const VertexType p3(midx + 20 * deltaMax, midy - deltaMax,-10);
 
 			//std::cout << "Super triangle " << std::endl << Triangle(p1, p2, p3) << std::endl;
 
