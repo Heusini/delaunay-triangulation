@@ -1,7 +1,7 @@
 #ifndef H_VECTOR2
 #define H_VECTOR2
 
-#include "delaunay-triangulation/numeric.h"
+#include "numeric.h"
 
 #include <iostream>
 #include <cmath>
