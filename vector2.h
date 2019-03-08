@@ -17,8 +17,9 @@ class Vector2
 		Vector2():x(0), y(0), color(-10){}
 
 		Vector2(T _x, T _y, int _color): x(_x), y(_y), color(_color){}
+    Vector2(T _x, T _y): x(_x), y(_y),color(-10){}
 
-		Vector2(const Vector2 &v): x(v.x), y(v.y){}
+		Vector2(const Vector2 &v): x(v.x), y(v.y), color(v.color){}
 
 		//
 		// Operations
