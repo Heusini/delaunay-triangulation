@@ -14,7 +14,7 @@ class Vector2
 		// Constructors
 		//
 
-		Vector2():x(0), y(0), color(0){}
+		Vector2():x(0), y(0), color(-10){}
 
 		Vector2(T _x, T _y, int _color): x(_x), y(_y), color(_color){}
 
