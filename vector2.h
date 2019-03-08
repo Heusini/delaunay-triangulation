@@ -1,7 +1,7 @@
 #ifndef H_VECTOR2
 #define H_VECTOR2
 
-#include "numeric.h"
+#include "delaunay-triangulation/numeric.h"
 
 #include <iostream>
 #include <cmath>
@@ -14,9 +14,9 @@ class Vector2
 		// Constructors
 		//
 
-		Vector2():x(0), y(0){}
+		Vector2():x(0), y(0), color(0){}
 
-		Vector2(T _x, T _y): x(_x), y(_y){}
+		Vector2(T _x, T _y, int _color): x(_x), y(_y), color(_color){}
 
 		Vector2(const Vector2 &v): x(v.x), y(v.y){}
 
@@ -42,6 +42,7 @@ class Vector2
 
 		T x;
 		T y;
+    int color;
 
 };
 
