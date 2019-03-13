@@ -24,7 +24,7 @@ class Edge
 template <class T>
 Vector2<double> Edge<T>::getMiddlePoint()
 {
-  return Vector2<double> middle((p2.x+p1.x)/2,(p2.y+p1.y)/2);
+  return Vector2<double> ((p2.x+p1.x)/2,(p2.y+p1.y)/2);
 }
 
 template <class T>
