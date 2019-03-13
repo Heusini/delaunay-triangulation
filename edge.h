@@ -16,8 +16,15 @@ class Edge
 		VertexType p1;
 		VertexType p2;
 
+    Vector2<double> getMiddlePoint();
+
 		bool isBad;
 };
+
+Vector2<double> Edge::getMiddlePoint()
+{
+  return Vector2<double> middle((p2.x+p1.x)/2,(p2.y+p1.y)/2);
+}
 
 template <class T>
 inline std::ostream &operator << (std::ostream &str, Edge<T> const &e)
