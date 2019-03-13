@@ -65,11 +65,18 @@ bool operator == (const Vector2<T>& v1, const Vector2<T>& v2)
 	return (v1.x == v2.x) && (v1.y == v2.y);
 }
 
+template<typename T>
+Vector2<T> operator + (const Vector<T> &v1, const Vector2<T>&v2)
+{
+  return Vector2<T>(v1.x+v2.x, v1.y+v2.y);
+
 template<class T>
 typename std::enable_if<!std::numeric_limits<T>::is_integer, bool>::type
     almost_equal(const Vector2<T>& v1, const Vector2<T>& v2, int ulp=2)
 {
 	return almost_equal(v1.x, v2.x, ulp) && almost_equal(v1.y, v2.y, ulp);
 }
+
+
 
 #endif
