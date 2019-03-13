@@ -65,7 +65,7 @@ bool operator == (const Vector2<T>& v1, const Vector2<T>& v2)
 	return (v1.x == v2.x) && (v1.y == v2.y);
 }
 
-template<typename T>
+template <>
 Vector2<T> operator + (const Vector2<T> &v1, const Vector2<T>&v2)
 {
   return Vector2<T>(v1.x+v2.x, v1.y+v2.y);
