@@ -86,7 +86,7 @@ Vector2<T> operator * (const Vector2<T> &v1, T factor)
 template <typename T>
 Vector2<T> operator / (const Vector2<T> &v1, T factor)
 {
-  return Vector2<T>(v1.x * factor, v1.y * factor);
+  return Vector2<T>(v1.x / factor, v1.y / factor);
 }
 
 
