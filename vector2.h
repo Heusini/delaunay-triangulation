@@ -41,6 +41,11 @@ class Vector2
 			return x * x + y * y;
 		}
 
+    T norm() const
+    {
+      return hypot(x,y);
+    }
+
 		T x;
 		T y;
     int color;
