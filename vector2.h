@@ -58,9 +58,9 @@ float Vector2<float>::dist(const Vector2<float> &v) const { return hypotf(x - v.
 template <>
 double Vector2<double>::dist(const Vector2<double> &v) const { return hypot(x - v.x, y - v.y);}
 
-double Vector2<double>::scalar(const Vector2<double> &v1, const Vector2<double> &v2)
+double Vector2<double>::scalar(const Vector2<double> &v1)
 {
-  return v1.x * v2.y - v1.y * v2.x;
+  return x * v.y - y * v.x;
 }
 
 template<typename T>
