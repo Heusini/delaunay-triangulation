@@ -45,6 +45,7 @@ class Vector2
     {
       return hypot(x,y);
     }
+    double scalar(const Vector2<double> &v1);
 
 		T x;
 		T y;
