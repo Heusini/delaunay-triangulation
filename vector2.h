@@ -40,12 +40,15 @@ class Vector2
 		{
 			return x * x + y * y;
 		}
+    
+    
 
     T norm() const
     {
       return hypot(x,y);
     }
-    double scalar(const Vector2<double> &v1);
+    double crossproduct(const Vector2<double> &v1);
+    double Vector2<double>::scalar(const Vector2<double> &v);
 
 		T x;
 		T y;
@@ -61,6 +64,11 @@ double Vector2<double>::dist(const Vector2<double> &v) const { return hypot(x - 
 
 template <>
 double Vector2<double>::scalar(const Vector2<double> &v)
+{
+  return x * v.x + y * v.y;
+}
+template <>
+double Vector2<double>::crossproduct(const Vector2<double> &v)
 {
   return x * v.y - y * v.x;
 }
