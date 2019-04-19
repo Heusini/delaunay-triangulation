@@ -48,7 +48,7 @@ class Vector2
       return hypot(x,y);
     }
     double crossproduct(const Vector2<double> &v1);
-    double Vector2<double>::scalar(const Vector2<double> &v);
+    double scalar(const Vector2<double> &v);
 
 		T x;
 		T y;
