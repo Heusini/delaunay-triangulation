@@ -53,8 +53,9 @@ class Vector2
 		T x;
 		T y;
     int color;
-
+    double curvature = 0;
 };
+
 
 template <>
 float Vector2<float>::dist(const Vector2<float> &v) const { return hypotf(x - v.x, y - v.y);}
