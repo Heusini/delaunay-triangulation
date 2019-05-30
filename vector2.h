@@ -16,10 +16,10 @@ class Vector2
 
 		Vector2():x(0), y(0), color(-10){}
 
-		Vector2(T _x, T _y, int _color): x(_x), y(_y), color(_color){}
-    Vector2(T _x, T _y): x(_x), y(_y),color(-10){}
+		Vector2(T _x, T _y, int _color): x(_x), y(_y), color(_color), curvature(0){}
+    Vector2(T _x, T _y): x(_x), y(_y),color(-10), curvature(0){}
 
-		Vector2(const Vector2 &v): x(v.x), y(v.y), color(v.color){}
+		Vector2(const Vector2 &v): x(v.x), y(v.y), color(v.color), curvature(v.curvature){}
 
 		//
 		// Operations
@@ -53,7 +53,7 @@ class Vector2
 		T x;
 		T y;
     int color;
-    double curvature = 0;
+    double curvature;
 };
 
 
@@ -77,7 +77,7 @@ double Vector2<double>::crossproduct(const Vector2<double> &v)
 template<typename T>
 std::ostream &operator << (std::ostream &str, Vector2<T> const &point)
 {
-	return str << "Point x: " << point.x << " y: " << point.y;
+	return str << "Point x: " << point.x << " y: " << point.y << " curvature: " << point.curvature;
 }
 
 template<typename T>
