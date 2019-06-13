@@ -5,6 +5,8 @@
 
 #include <iostream>
 #include <cmath>
+#include <boost/archive/text_oarchive.hpp>
+#include <boost/archive/text_iarchive.hpp>
 
 template <typename T>
 class Vector2
@@ -119,6 +121,21 @@ typename std::enable_if<!std::numeric_limits<T>::is_integer, bool>::type
 	return almost_equal(v1.x, v2.x, ulp) && almost_equal(v1.y, v2.y, ulp);
 }
 
+namespace boost {
+namespace serialization {
 
+template<class Archive>
+void serialize(Archive & ar, Vector2<double> & v, const unsigned int version)
+{
+    ar & v.x;
+    ar & v.y;
+    ar & v.color;
+    ar & v.curvature;
+}
 
+} // namespace serialization
+}
 #endif
+
+
+

@@ -47,5 +47,17 @@ inline bool almost_equal (const Edge<T> & e1, const Edge<T> & e2)
 			(almost_equal(e1.p1, e2.p2) && almost_equal(e1.p2, e2.p1));
 }
 
+namespace boost {
+namespace serialization {
+
+template<class Archive>
+void serialize(Archive & ar, Edge<double> & v, const unsigned int version)
+{
+    ar & v.p1;
+    ar & v.p2;
+}
+
+} // namespace serialization
+}
 #endif
 
