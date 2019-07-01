@@ -19,7 +19,14 @@ class Edge
     Vector2<double> getMiddlePoint();
 
 		bool isBad;
+    double getLength();
 };
+
+template<>
+double Edge<double>::getLength()
+{
+  return p1.dist(p2);
+}
 
 template <class T>
 Vector2<double> Edge<T>::getMiddlePoint()
