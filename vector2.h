@@ -49,7 +49,7 @@ class Vector2
     {
       return hypot(x,y);
     }
-    double crossproduct(const Vector2<double> &v1);
+    double crossproduct(const Vector2<double> &v1) const;
     double scalar(const Vector2<double> &v);
 
 		T x;
@@ -71,7 +71,7 @@ double Vector2<double>::scalar(const Vector2<double> &v)
   return x * v.x + y * v.y;
 }
 template <>
-double Vector2<double>::crossproduct(const Vector2<double> &v)
+double Vector2<double>::crossproduct (const Vector2<double> &v) const
 {
   return x * v.y - y * v.x;
 }
